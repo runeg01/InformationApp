@@ -272,6 +272,9 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Events.cshtml" />
     <Content Include="Views\Home\Announcements.cshtml" />
+    <Content Include="Views\Home\AddMember.cshtml" />
+    <Content Include="Views\Home\AddEvent.cshtml" />
+    <Content Include="Views\Home\AddAnnouncement.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

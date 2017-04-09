@@ -1,0 +1,19 @@
+﻿@model InformationApp.Models.Members
+@{
+    ViewBag.Title = "AddMember";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AddMember</h2>
+<div>
+    <p>Member Name:@Html.TextBoxFor(x => x.Name)</p>
+    <p>Member Email:@Html.TextBoxFor(x => x.EmailAddress)</p>
+    <p>Member Address:@Html.TextBoxFor(x => x.Address)</p>
+    <p>Member Phone:@Html.TextBoxFor(x => x.PhoneNumber)</p>
+    <p>Member Location:@Html.TextBoxFor(x => x.Location)</p>
+    <p>Member BIO:@Html.TextBoxFor(x => x.Biography)</p>
+    <p>Member Skills:@Html.TextBoxFor(x => x.Skills)</p>
+
+    <input type="Submit" value="Submit Member"
+</div>
+
