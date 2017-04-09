@@ -8,7 +8,8 @@ namespace InformationApp.Models
 {
     public class Announcements
     {
-        public int AnnouncementId { get; set; }
+        [Key]
+        public int AnnouncementsId { get; set; }
         [Required(ErrorMessage = "Please Enter the Announcement Name")]
 
         public String AnnouncementName { get; set; }

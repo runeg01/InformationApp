@@ -8,7 +8,8 @@ namespace InformationApp.Models
 {
     public class Events
     {
-        public int EventId { get; set; }
+        [Key]
+        public int EventsId { get; set; }
         [Required(ErrorMessage = "Please Enter the event Name")]
 
         public String EventName { get; set; }

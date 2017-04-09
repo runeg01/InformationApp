@@ -8,7 +8,8 @@ namespace InformationApp.Models
 {
     public class Members
     {
-        public int MemberId { get; set; }
+        [Key]
+        public int MembersId { get; set; }
         [Required(ErrorMessage = "Please Enter the member Name")]
 
         public String Name { get; set; }

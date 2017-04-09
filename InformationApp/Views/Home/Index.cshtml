@@ -2,14 +2,8 @@
     ViewBag.Title = "Home Page";
 }
 
-<div>
-    Member Name :@Model.Name <br />
-    Member Name :@Model.EmailAddress <br />
-    Member Name :@Model.Address <br />
-    Member Name :@Model.PhoneNumber <br />
-    Member Name :@Model.Location <br />
-    Member Name :@Model.Biography <br />
-    Member Name :@Model.Skills <br />
-</div>
 
-@Html.ActionLink("Add New member", "AddMember")
+
+<div>
+    @Html.Partial("_MemberList")
+</div>

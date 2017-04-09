@@ -1,0 +1,46 @@
+﻿@model IEnumerable<InformationApp.Models.Announcements>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AnnouncementName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnnouncementDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnnouncementAuthor)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnnouncementName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnnouncementDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnnouncementAuthor)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.AnnouncementsId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AnnouncementsId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AnnouncementsId })
+        </td>
+    </tr>
+}
+
+</table>

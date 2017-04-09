@@ -1,0 +1,17 @@
+﻿@model IEnumerable<InformationApp.Models.Members>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            @Html.DisplayFor(modelItem => item.Name) <br />
+            @Html.DisplayFor(modelItem => item.EmailAddress) <br />
+            @Html.DisplayFor(modelItem => item.Address) <br />
+            @Html.DisplayFor(modelItem => item.PhoneNumber) <br />
+            @Html.DisplayFor(modelItem => item.Location) <br />
+            @Html.DisplayFor(modelItem => item.Biography) <br />
+            @Html.DisplayFor(modelItem => item.Skills) <br />
+        </li>
+    }
+</ul>
+
