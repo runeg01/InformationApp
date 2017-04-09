@@ -10,6 +10,7 @@ namespace InformationApp.Controllers
 {
     public class HomeController : Controller
     {
+        InformationAppDB db = new InformationAppDB();
         private Members myMember = new Members
         {
             MemberId = 1,
@@ -40,7 +41,8 @@ namespace InformationApp.Controllers
         };
         public ActionResult Index()
         {
-            return View(myMember);
+            var model = db.Members.LastOrDefault();
+            return View(model);
         }
         [HttpGet]
         public ViewResult AddMember ()
@@ -48,21 +50,28 @@ namespace InformationApp.Controllers
             return View();
         }
         [HttpPost]
-        public ViewResult AddMember (Members members)
+        public ActionResult AddMember (Members members)
         {
             if(ModelState.IsValid)
-            { 
-            return View("Index", members);
+            {
+                db.Members.Add(members);
+                return RedirectToAction("MemberList");
         }
             else
             {
                 return View();
             }
             }
+        public ViewResult MemberList()
+        {
+            var model = db.Members.ToList();
+            return View(model);
+        }
 
         public ActionResult Events ()
         {
-            return View(myEvent);
+            var model = db.Members.LastOrDefault();
+            return View(model);
         }
         [HttpGet]
         public ViewResult AddEvent ()
@@ -70,21 +79,28 @@ namespace InformationApp.Controllers
             return View();
         }
         [HttpPost]
-        public ViewResult AddEvent(Events events)
+        public ActionResult AddEvent(Events events)
         {
             if (ModelState.IsValid)
             {
-                return View("Events", events);
+                db.Events.Add(events);
+                return RedirectToAction("EventList");
             }
             else
             {
                 return View();
             }
         }
+        public ViewResult EventList()
+        {
+            var model = db.Events.ToList();
+            return View(model);
+        }
 
         public ActionResult Announcements ()
         {
-            return View(myAnnouncement);
+            var model = db.Members.LastOrDefault();
+            return View(model);
         }
         [HttpGet]
         public ViewResult AddAnnouncement()
@@ -92,16 +108,22 @@ namespace InformationApp.Controllers
             return View();
         }
         [HttpPost]
-        public ViewResult AddAnnouncement(Announcements announcements)
+        public ActionResult AddAnnouncement(Announcements announcements)
         {
             if (ModelState.IsValid)
             {
-                return View("Announcements", announcements);
+                db.Announcements.Add(announcements);
+                return RedirectToAction("AnnouncementList");
             }
             else
             {
                 return View();
             }
+        }
+        public ViewResult AnnouncementList()
+        {
+            var model = db.Announcements.ToList();
+            return View(model);
         }
         public ActionResult About()
         {
