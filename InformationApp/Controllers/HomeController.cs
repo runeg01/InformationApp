@@ -42,13 +42,29 @@ namespace InformationApp.Controllers
         {
             return View(myMember);
         }
+        public ViewResult AddMember ()
+        {
+            return View();
+        }
+
+
         public ActionResult Events ()
         {
             return View(myEvent);
         }
+        public ViewResult AddEvent ()
+        {
+            return View();
+        }
+
+
         public ActionResult Announcements ()
         {
             return View(myAnnouncement);
+        }
+        public ViewResult AddAnnouncement()
+        {
+            return View();
         }
 
         public ActionResult About()

@@ -17,7 +17,7 @@ namespace InformationApp.Models
 
         public DateTime Date { get; set; }
 
-        public String Location { get; set; }
+        
 
        
     }
