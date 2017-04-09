@@ -6,11 +6,15 @@
 
 <h2>AddAnnouncement</h2>
 <div>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary()
     <p>Member Name:@Html.TextBoxFor(x => x.AnnouncementName)</p>
     <p>Member Email:@Html.TextBoxFor(x => x.AnnouncementDescription)</p>
     <p>Member Address:@Html.TextBoxFor(x => x.AnnouncementAuthor)</p>
-   
-    
 
-    <input type="Submit" value="Submit Announcement"
+
+
+    <input type="Submit" value="Submit Announcement" />
+    }
 </div>

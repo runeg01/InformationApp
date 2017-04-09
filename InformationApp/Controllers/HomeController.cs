@@ -42,31 +42,67 @@ namespace InformationApp.Controllers
         {
             return View(myMember);
         }
+        [HttpGet]
         public ViewResult AddMember ()
         {
             return View();
         }
-
+        [HttpPost]
+        public ViewResult AddMember (Members members)
+        {
+            if(ModelState.IsValid)
+            { 
+            return View("Index", members);
+        }
+            else
+            {
+                return View();
+            }
+            }
 
         public ActionResult Events ()
         {
             return View(myEvent);
         }
+        [HttpGet]
         public ViewResult AddEvent ()
         {
             return View();
         }
-
+        [HttpPost]
+        public ViewResult AddEvent(Events events)
+        {
+            if (ModelState.IsValid)
+            {
+                return View("Events", events);
+            }
+            else
+            {
+                return View();
+            }
+        }
 
         public ActionResult Announcements ()
         {
             return View(myAnnouncement);
         }
+        [HttpGet]
         public ViewResult AddAnnouncement()
         {
             return View();
         }
-
+        [HttpPost]
+        public ViewResult AddAnnouncement(Announcements announcements)
+        {
+            if (ModelState.IsValid)
+            {
+                return View("Announcements", announcements);
+            }
+            else
+            {
+                return View();
+            }
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

@@ -7,10 +7,14 @@
 <h2>AddEvent</h2>
 
 <div>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
     <p>Member Name:@Html.TextBoxFor(x => x.EventName)</p>
     <p>Member Desc:@Html.TextBoxFor(x => x.EventDesc)</p>
     <p>Member Location:@Html.TextBoxFor(x => x.EventLocation)</p>
     <p>Member Date:@Html.TextBoxFor(x => x.Date)</p>
 
-    <input type="Submit" value="Submit Event"
+    <input type="Submit" value="Submit Event" />
+}
 </div>

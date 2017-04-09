@@ -6,6 +6,9 @@
 
 <h2>AddMember</h2>
 <div>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
     <p>Member Name:@Html.TextBoxFor(x => x.Name)</p>
     <p>Member Email:@Html.TextBoxFor(x => x.EmailAddress)</p>
     <p>Member Address:@Html.TextBoxFor(x => x.Address)</p>
@@ -14,6 +17,8 @@
     <p>Member BIO:@Html.TextBoxFor(x => x.Biography)</p>
     <p>Member Skills:@Html.TextBoxFor(x => x.Skills)</p>
 
-    <input type="Submit" value="Submit Member"
+
+    <input type="Submit" value="Submit Member" />
+}
 </div>
 
