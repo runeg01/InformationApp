@@ -18,6 +18,7 @@ namespace InformationApp.Controllers
         {
             
             return View(db.Members.ToList());
+            
         }
         [HttpGet]
         public ViewResult AddMember ()
@@ -46,7 +47,7 @@ namespace InformationApp.Controllers
         public ActionResult Events ()
         {
             
-            return View();
+            return View(db.Events.ToList());
         }
         [HttpGet]
         public ViewResult AddEvent ()
@@ -75,7 +76,7 @@ namespace InformationApp.Controllers
         public ActionResult Announcements ()
         {
             
-            return View();
+            return View(db.Announcements.ToList());
         }
         [HttpGet]
         public ViewResult AddAnnouncement()
@@ -106,7 +107,7 @@ namespace InformationApp.Controllers
 
             return View();
         }
-
+        [Authorize(Users = "Admin@Admin.com")]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

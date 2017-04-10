@@ -12,6 +12,7 @@ namespace InformationApp.Controllers
 {
     public class AnnouncementsController : Controller
     {
+        
         private InformationAppDB db = new InformationAppDB();
 
         // GET: Announcements
@@ -21,6 +22,7 @@ namespace InformationApp.Controllers
         }
 
         // GET: Announcements/Details/5
+        [Authorize(Users = "Admin@Admin.com")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -59,6 +61,7 @@ namespace InformationApp.Controllers
         }
 
         // GET: Announcements/Edit/5
+        [Authorize(Users = "Admin@Admin.com")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -90,6 +93,7 @@ namespace InformationApp.Controllers
         }
 
         // GET: Announcements/Delete/5
+        [Authorize(Users = "Admin@Admin.com")]
         public ActionResult Delete(int? id)
         {
             if (id == null)

@@ -1,0 +1,13 @@
+﻿@model IEnumerable<InformationApp.Models.Announcements>
+
+<ul class="ListView">
+    @foreach (var item in Model)
+    {
+        <li>
+           <span>@Html.DisplayFor(modelItem => item.AnnouncementName)</span> <br/>
+            @Html.DisplayFor(modelItem => item.AnnouncementDescription) <br />
+            @Html.DisplayFor(modelItem => item.AnnouncementAuthor) <br />
+
+        </li>
+    }
+</ul>

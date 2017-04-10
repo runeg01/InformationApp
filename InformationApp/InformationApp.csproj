@@ -300,6 +300,8 @@
     <Content Include="Views\Announcements\Edit.cshtml" />
     <Content Include="Views\Announcements\Index.cshtml" />
     <Content Include="Views\Home\_MemberList.cshtml" />
+    <Content Include="Views\Home\_EventList.cshtml" />
+    <Content Include="Views\Home\_AnnouncementList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

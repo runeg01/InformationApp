@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<InformationApp.Models.Members>
 
-<ul>
+<ul class="ListView">
     @foreach (var item in Model)
     {
         <li>
-            @Html.DisplayFor(modelItem => item.Name) <br />
+            <span>@Html.DisplayFor(modelItem => item.Name)</span> <br />
             @Html.DisplayFor(modelItem => item.EmailAddress) <br />
             @Html.DisplayFor(modelItem => item.Address) <br />
             @Html.DisplayFor(modelItem => item.PhoneNumber) <br />

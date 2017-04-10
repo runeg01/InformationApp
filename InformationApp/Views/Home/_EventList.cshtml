@@ -1,0 +1,14 @@
+﻿@model IEnumerable<InformationApp.Models.Events>
+
+
+<ul class="ListView">
+    @foreach(var item in Model)
+    {
+        <li>
+            <span>@Html.DisplayFor(modelItem => item.EventName)</span> <br/>
+            @Html.DisplayFor(modelItem => item.EventDesc) <br />
+            @Html.DisplayFor(modelItem => item.EventLocation) <br />
+            @Html.DisplayFor(modelItem => item.Date) <br />
+        </li>
+    }
+</ul>
