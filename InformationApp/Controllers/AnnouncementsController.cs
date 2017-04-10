@@ -22,7 +22,7 @@ namespace InformationApp.Controllers
         }
 
         // GET: Announcements/Details/5
-        [Authorize(Users = "Admin@Admin.com")]
+       
         public ActionResult Details(int? id)
         {
             if (id == null)

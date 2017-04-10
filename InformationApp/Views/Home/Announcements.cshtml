@@ -4,8 +4,11 @@
 }
 
 <h2>Announcements</h2>
+<div class="addNew">
+    @Html.ActionLink("Add New Announcements", "Create", "Announcements")
+</div>
 
 <div>
     @Html.Partial("_AnnouncementList")
+    
 </div>
-@Html.ActionLink("Add New Announcement","Create", "Announcements")

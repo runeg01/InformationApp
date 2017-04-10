@@ -4,7 +4,9 @@
 }
 
 <h2>Events</h2>
-
+<div class="addNew">
+    @Html.ActionLink("Add New Event", "Create", "Events")
+</div>
 <div>
     @Html.Partial("_EventList")
 </div>
